@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChakraProvider, Box, Flex, Textarea, Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react';
+import { ChakraProvider, Box, Flex, Textarea, Tabs, TabList, TabPanels, Tab, TabPanel, Text } from '@chakra-ui/react';
 import fetchBalance from '../Components/get_balance';
 import BalanceDisplay from '../Components/BalanceDisplay';
 import MoneyInput from '../Components/input';
@@ -49,6 +49,9 @@ const FinancePage = () => {
       <TopBar />
       <NavComponent />
       <Center>
+      <Text mt={'30px'} mb={'30px'} fontSize={'26px'}>Personal Finances</Text>
+      </Center>
+      <Center>
       <Flex direction="column">
         <Box alignContent={'center'} justifyContent='center' alignItems='center'>
           <BalanceDisplay balance={balance} />
@@ -56,10 +59,10 @@ const FinancePage = () => {
         <Box>
           <MoneyInput updateBalance={handleUpdateBalance} />
         </Box>
-        <Tabs borderColor='black' size='md' mt='-83px' ml='0px' mr='0px' variant='enclosed'>
+        <Tabs borderColor='black' size='md' mt='-180px' ml='0px' mr='0px' variant='enclosed'>
         <TabList borderColor='black'>
-          <Tab color='pink'>Financial Goals</Tab>
-          <Tab>Notes</Tab>
+          <Tab _selected={{color: 'white', bg: '#F29469', borderColor: "black"}}>Financial Goals</Tab>
+          <Tab _selected={{color: 'white', bg: '#F29469', borderColor: "black"}}>Notes</Tab>
         </TabList>
         <TabPanels>
           <TabPanel>

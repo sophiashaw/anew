@@ -98,7 +98,7 @@ const MoneyInput = ({ updateBalance }) => {
             {/* Add Income Button */}
             <Popover>
               <PopoverTrigger>
-                <Button leftIcon={<BiPlusCircle />} mt='-170px' size='md' bg="pink" variant="solid">
+                <Button leftIcon={<BiPlusCircle />} mt='-320px' size='md' bg="pink" variant="solid">
                   {/* <Badge borderRadius='full' fontSize='lg' px='3' colorScheme='pink'> */}
                     Income
                   {/* </Badge> */}
@@ -107,7 +107,7 @@ const MoneyInput = ({ updateBalance }) => {
               <PopoverContent>
                 <PopoverArrow />
                 <PopoverCloseButton />
-                <PopoverHeader>Input your Income</PopoverHeader>
+                <PopoverHeader>How much did you earn?</PopoverHeader>
                 <PopoverBody>
                   <NumberInput
                     onChange={(valueString) => handleIncomeChange(valueString)}
@@ -125,7 +125,7 @@ const MoneyInput = ({ updateBalance }) => {
                   <option value='option3'>Bills</option>
                   <option value='option3'>Other</option>
                   </Select> */}
-                  <Button mt={2} colorScheme="pink" onClick={handleIncomeSubmit}>Enter</Button>
+                  <Button bg="#9c3848" textColor="white" onClick={handleIncomeSubmit}>Enter</Button>
                 </PopoverBody>
               </PopoverContent>
             </Popover>
@@ -133,7 +133,7 @@ const MoneyInput = ({ updateBalance }) => {
             {/* Subtract Expenses Button */}
             <Popover>
               <PopoverTrigger>
-                <Button leftIcon={<BiMinusCircle />} mt='-170px' bg="pink" variant="solid">
+                <Button leftIcon={<BiMinusCircle />} mt='-170px' mb='150px' bg="pink" variant="solid">
                   {/* <Badge borderRadius='full' px='2' colorScheme='pink'> */}
                     Expense
                   {/* </Badge> */}
@@ -154,7 +154,7 @@ const MoneyInput = ({ updateBalance }) => {
                       <NumberDecrementStepper />
                     </NumberInputStepper>
                   </NumberInput>
-                  <Button mt={2} colorScheme="pink" onClick={handleExpenseSubmit}>Enter</Button>
+                  <Button mt={2} bg="#9c3848" textColor="white" onClick={handleExpenseSubmit}>Enter</Button>
                 </PopoverBody>
               </PopoverContent>
             </Popover>

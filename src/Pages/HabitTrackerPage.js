@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Box, ButtonGroup, Stack, IconButton, Progress, Heading } from '@chakra-ui/react'
+import { Button, Box, ButtonGroup, Stack, IconButton, Progress, Heading, Text } from '@chakra-ui/react'
 import { LuPlus } from "react-icons/lu";
 import NavComponent from '../Components/Nav';
 import TopBar from '../Components/top_bar';
@@ -37,7 +37,7 @@ const HabitTrackerPage = () => {
             <TopBar />
             <NavComponent />
              <Box textAlign='center' mt={'5px'} mb={'5px'}>
-            <Heading as='h1'>Weekly Milestones</Heading>
+            <Text fontSize={'26px'}>Weekly Milestones</Text>
             </Box>
                 
             <Accordion allowToggle> 
