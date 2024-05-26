@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 
-app = Flask((__name__))
+app = Flask(__name__)
 
 #Members API Route
 money = {"balance": 0}

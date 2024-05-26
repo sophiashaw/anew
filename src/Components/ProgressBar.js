@@ -26,20 +26,20 @@ const steps = [
 ]
 
 function ProgressBar({Num_days}) {
-  const { completeStep, setCompleteStep } = useSteps({
-    index: Num_days - 1,
+  const { activeStep, setActiveStep } = useSteps({
+    index: Num_days,
     count: steps.length,
   })
 
   const max = steps.length - 1
-  const progressPercent = (completeStep / max) * 100
+  const progressPercent = (activeStep / max) * 100
 
   return (
     <Box position='relative'>
-        <Stepper size='sm' colorScheme='pink' index={completeStep} gap='0.12'>
+        <Stepper size='sm' colorScheme='orange' index={activeStep} gap='0.12'>
         {steps.map((step, index) => (
-        <Step key={index} onClick={() => setCompleteStep(index)}>
-        <Flex direction="column" align="center">
+        <Step key={index} onClick={() => setActiveStep(index)}>
+        <Flex direction="column" align="center" zIndex={'100'}>
           <Box>
             <StepIndicator>
               <StepStatus
@@ -57,15 +57,16 @@ function ProgressBar({Num_days}) {
         </Flex>
       </Step>
       ))}
-      </Stepper>
+      </Stepper >
       <Progress
         value={progressPercent}
         position='absolute'
         height='10px'
         width='full'
         top='10px'
-        zIndex={-1}
-        color={"#EF7A43"}
+        zIndex={0}
+        textColor="black"
+        colorScheme={'orange'}
       />
     </Box>
   )

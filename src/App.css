@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  background-color: #F2EDE7; /* Replace with your desired color */
+}

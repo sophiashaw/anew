@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react'
 import { ChakraProvider, Center, AbsoluteCenter } from '@chakra-ui/react'
 import fetchBalance from './get_balance';
 import BalanceDisplay from '../Pages/FinancePage';
-import { Button, Box, Stack } from '@chakra-ui/react'
+import { Button, Box, Stack, Badge } from '@chakra-ui/react'
 import { BiMinusCircle } from "react-icons/bi";
 import { BiPlusCircle } from "react-icons/bi";
+import { Select } from '@chakra-ui/react';
 import {
   Popover,
   PopoverTrigger,
@@ -97,8 +98,10 @@ const MoneyInput = ({ updateBalance }) => {
             {/* Add Income Button */}
             <Popover>
               <PopoverTrigger>
-                <Button leftIcon={<BiPlusCircle />} colorScheme="pink" variant="outline">
-                  Income
+                <Button leftIcon={<BiPlusCircle />} mt='-170px' size='md' bg="pink" variant="solid">
+                  {/* <Badge borderRadius='full' fontSize='lg' px='3' colorScheme='pink'> */}
+                    Income
+                  {/* </Badge> */}
                 </Button>
               </PopoverTrigger>
               <PopoverContent>
@@ -116,6 +119,12 @@ const MoneyInput = ({ updateBalance }) => {
                       <NumberDecrementStepper />
                     </NumberInputStepper>
                   </NumberInput>
+                  {/* <Select placeholder='Select option'>
+                  <option value='option1'>Food</option>
+                  <option value='option2'>Transportation</option>
+                  <option value='option3'>Bills</option>
+                  <option value='option3'>Other</option>
+                  </Select> */}
                   <Button mt={2} colorScheme="pink" onClick={handleIncomeSubmit}>Enter</Button>
                 </PopoverBody>
               </PopoverContent>
@@ -124,8 +133,10 @@ const MoneyInput = ({ updateBalance }) => {
             {/* Subtract Expenses Button */}
             <Popover>
               <PopoverTrigger>
-                <Button leftIcon={<BiMinusCircle />} colorScheme="pink" variant="outline">
-                  Expense
+                <Button leftIcon={<BiMinusCircle />} mt='-170px' bg="pink" variant="solid">
+                  {/* <Badge borderRadius='full' px='2' colorScheme='pink'> */}
+                    Expense
+                  {/* </Badge> */}
                 </Button>
               </PopoverTrigger>
               <PopoverContent>

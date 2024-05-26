@@ -1,17 +1,20 @@
-
 import React from 'react'
-import { Button, Box, ButtonGroup, Stack, IconButton, Progress } from '@chakra-ui/react'
+import { Button, Box, ButtonGroup, Stack, IconButton, Progress, Heading } from '@chakra-ui/react'
 import { LuPlus } from "react-icons/lu";
+import NavComponent from '../Components/Nav';
+import TopBar from '../Components/top_bar';
+
+
 import {
     Editable,
     EditableInput,
     EditableTextarea,
     EditablePreview,
-  } from '@chakra-ui/react'
+   } from '@chakra-ui/react'
 import Calendar from '../Components/Calendar';
+//import Scheduler from '../Components/Scheduler';
 
-
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 //import HabitDetails from '../TrackerComponents/HabitDetails';
 import {
     Accordion,
@@ -22,16 +25,23 @@ import {
   } from '@chakra-ui/react'
 import ProgressBar from '../Components/ProgressBar';
 
+const pageStyle = {
+    backgroundColor: '#F2EDE7', // Replace with your desired color
+  };
+
+
     
 const HabitTrackerPage = () => {
     return (
-        <>
-            <h1> Habits
-            <Button RightIcon={<LuPlus />}colorScheme='pink' variant='outline' size='10px'></Button>
-            </h1>
+        <div style={pageStyle}>
+            <TopBar />
+            <NavComponent />
+             <Box textAlign='center' mt={'5px'} mb={'5px'}>
+            <Heading as='h1'>Weekly Milestones</Heading>
+            </Box>
                 
             <Accordion allowToggle> 
-                <AccordionItem>
+                <AccordionItem borderColor={'#F2EDE7'}>
                     <h2>
                     <AccordionButton>
                         <Box as='span' flex='1' textAlign='left'>
@@ -43,14 +53,14 @@ const HabitTrackerPage = () => {
                         <AccordionIcon />
                     </AccordionButton>
                     </h2>
-                    <AccordionPanel pb={4}>
+                    <AccordionPanel pb={4} bg="#FBCE9D">
         
                         <ProgressBar Num_days={6}>
                         </ProgressBar>
                     </AccordionPanel>
                 </AccordionItem>
 
-                <AccordionItem>
+                <AccordionItem borderColor={'#F2EDE7'}>
                     <h2>
                     <AccordionButton>
                         <Box as='span' flex='1' textAlign='left'>
@@ -62,13 +72,13 @@ const HabitTrackerPage = () => {
                         <AccordionIcon />
                     </AccordionButton>
                     </h2>
-                    <AccordionPanel>
+                    <AccordionPanel pb={4} bg="#FBCE9D">
                         <ProgressBar Num_days={3}>
                         </ProgressBar>
                     </AccordionPanel>
                 </AccordionItem>
 
-                <AccordionItem>
+                <AccordionItem borderColor={'#F2EDE7'}>
                     <h2>
                     <AccordionButton>
                         <Box as='span' flex='1' textAlign='left'>
@@ -80,16 +90,28 @@ const HabitTrackerPage = () => {
                         <AccordionIcon />
                     </AccordionButton>
                     </h2>
-                    <AccordionPanel>
+                    <AccordionPanel bg="#FBCE9D">
                         <ProgressBar Num_days={1}>
                         </ProgressBar>
                     </AccordionPanel>
                 </AccordionItem>
                 </Accordion>
-                <Calendar/>
-                </>
             
+
         
+        <div style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: '503px'
+        }}>
+           <h1><Calendar/></h1>
+        {/* </div>
+            <Box bg={'#F2EDE7'} height={'512px'}>
+
+        </Box>*/}
+        </div>
+        </div>
     );
 };
 

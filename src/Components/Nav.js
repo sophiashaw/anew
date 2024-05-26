@@ -20,7 +20,7 @@ const NavComponent = () => {
     >
       <Breadcrumb>
         <BreadcrumbItem>
-          <BreadcrumbLink as={Link} to="/Pages/HabitTrackerPage">
+          <BreadcrumbLink as={Link} to="/HabitTrackerPage">
             <IconButton
             colorScheme='#ef7a43ff'
             aria-label='Habit Tracker'
@@ -31,7 +31,7 @@ const NavComponent = () => {
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbItem>
-          <BreadcrumbLink as={Link} to="/Pages/FinancePage">
+          <BreadcrumbLink as={Link} to="/FinancePage">
             <IconButton
             colorScheme='#ef7a43ff'
             aria-label='Finances'
