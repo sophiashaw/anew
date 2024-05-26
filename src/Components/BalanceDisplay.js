@@ -13,8 +13,8 @@ const BalanceDisplay = ({ balance }) => {
       <Flex height="100" alignItems="center" justifyContent="center">
         <Box textAlign="center" color="#ed9cd3">
           <Stat>
-            <StatLabel fontSize="35px">Total Balance</StatLabel>
-            <StatNumber fontSize="30px">${balance !== null ? balance.toFixed(2) : '0.00'}</StatNumber>
+            <StatLabel fontSize="25px">Total Balance:</StatLabel>
+            <StatNumber fontSize="55px">${balance !== null ? balance.toFixed(2) : '0.00'}</StatNumber>
             <StatHelpText fontSize="10px">May 12 - May 28</StatHelpText>
           </Stat>
         </Box>
